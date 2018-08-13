@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView android:id="@+id/iv_backdrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/movie_backdrop"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"
+                    />
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="100dp"
+                    >
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="120dp"
+                        android:background="@color/colorWhite"
+                        android:layout_gravity="bottom"
+                        app:cardBackgroundColor="@color/colorWhite"
+                        android:elevation="7dp"
+                        >
+                        <android.support.constraint.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="160dp"
+                            >
+                            <TextView
+                                android:id="@+id/tv_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Pirate of the Carribbean Jack Sparrow"
+                                android:textStyle="bold"
+                                android:padding="8dp"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:layout_marginBottom="16dp"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_rating"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginBottom="16dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tv_title"
+                                android:textSize="12sp"
+                                tools:text="7/10" />
+                            <TextView
+                                android:id="@+id/tv_release_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginBottom="16dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tv_rating"
+                                android:textSize="12sp"
+                                tools:text="7th of Aug, 2009" />
+                        </android.support.constraint.ConstraintLayout>
+                    </android.support.v7.widget.CardView>
+                    <ImageView
+                        android:id="@+id/iv_poster"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:scaleType="centerCrop"
+                        android:elevation="10dp"
+                        android:contentDescription="@string/movie_poster"
+                        />
+
+                </FrameLayout>
+            </FrameLayout>
+            <TextView android:id="@+id/tv_plot_synopsis"
+                android:layout_margin="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="In 2013, something terrible is awakening in London's National Gallery; in 1562, a murderous plot is afoot in Elizabethan England; and somewhere in space an ancient battle reaches its devastating conclusion. All of reality is at stake as the Doctor's own dangerous past comes back to haunt him."
+                />
+        </LinearLayout>
+    </ScrollView>
+    <FrameLayout android:id="@+id/progress_bar_wrapper"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:background="@color/colorWhite"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:layout_gravity="center"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+    </FrameLayout>
+    <LinearLayout android:id="@+id/message_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@color/colorWhite"
+        >
+        <TextView android:id="@+id/tv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button android:id="@+id/btn_retry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/retry"/>
+    </LinearLayout>
+</FrameLayout>

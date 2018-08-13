@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PopularMovies</string>
+    <string name="movie_backdrop">Movie Backdrop</string>
+    <string name="movie_poster">Movie Poster</string>
+    <string name="retry">Retry</string>
+    <string name="swipe_to_retry">Swipe to retry.</string>
+    <string name="sort_by">Sort By</string>
+    <string name="sort_by_rating">Sort by rating</string>
+    <string name="sort_by_popularity">Sort by popularity</string>
+</resources>
