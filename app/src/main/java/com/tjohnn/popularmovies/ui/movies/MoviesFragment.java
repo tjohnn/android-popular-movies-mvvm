@@ -85,9 +85,7 @@ public class MoviesFragment extends DaggerFragment implements SwipeRefreshLayout
     private String sortOrder;
 
 
-    private MoviesAdapter.MovieItemLister movieItemListener = movieId -> {
-        viewModel.openDetails(movieId);
-    };
+    private MoviesAdapter.MovieItemLister movieItemListener = movieId -> viewModel.openDetails(movieId);
 
     public static MoviesFragment newInstance() {
 

@@ -41,7 +41,7 @@ public abstract class MainActivityModule {
 
     @Provides
     @ActivityScoped
-    static BaseNavigator compositeDisposable(AppCompatActivity activity){
+    static BaseNavigator baseNavigator(AppCompatActivity activity){
         return new Navigator(activity);
     }
 

@@ -14,14 +14,19 @@ import timber.log.Timber;
 
 public class MoviesApp extends DaggerApplication {
 
+    AndroidInjector<? extends DaggerApplication> injector;
+
     @Override
     protected AndroidInjector<? extends DaggerApplication> applicationInjector() {
-        return DaggerAppComponent.builder().application(this).build();
+        return injector;
     }
 
     @Override
     public void onCreate() {
         super.onCreate();
+
+        injector = DaggerAppComponent.builder().application(this).build();
+
         if (BuildConfig.DEBUG)
             Timber.plant(new TimberTree());
     }
