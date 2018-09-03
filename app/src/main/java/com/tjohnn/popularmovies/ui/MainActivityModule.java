@@ -1,6 +1,5 @@
 package com.tjohnn.popularmovies.ui;
 
-import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 
 import com.tjohnn.popularmovies.di.ActivityScoped;

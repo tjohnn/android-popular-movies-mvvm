@@ -43,4 +43,5 @@ ext {
     picassoVersion = '2.5.2'
     okhttpDownloaderVersion = '1.1.0'
     retrofitRxjavaVersion = '1.0.0'
+    archComponentsVersion = '1.1.1'
 }

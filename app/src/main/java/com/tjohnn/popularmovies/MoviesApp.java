@@ -23,9 +23,9 @@ public class MoviesApp extends DaggerApplication {
 
     @Override
     public void onCreate() {
-        super.onCreate();
-
         injector = DaggerAppComponent.builder().application(this).build();
+
+        super.onCreate();
 
         if (BuildConfig.DEBUG)
             Timber.plant(new TimberTree());
