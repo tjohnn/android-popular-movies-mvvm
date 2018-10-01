@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:background="@drawable/bg_border_bottom">
+
+    <TextView android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Back in 1977 I remember going into the original Cine Capri to see “Star Wars” with some friends. I was very young but little did I know that movie would change my life and put me on the path that I am now. Over the decades that have followed I have read the books and comics, played with the toys, played the video games, and eagerly watched any new film or television show related to the franchise.\n\nThe fact that Disney has put out a new film every years since “Star Wars: The Force Awakens” is great for fans like me as those three year waits; to say nothing of the 17+ years between the Original and Prequel Trilogies were tough."
+        android:layout_gravity="center_vertical"
+        />
+    <TextView android:id="@+id/tv_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorSecondaryText"
+        android:layout_marginTop="8dp"
+        tools:text="- garethm"
+        android:textStyle="bold|italic"
+        android:layout_gravity="end"/>
+</LinearLayout>

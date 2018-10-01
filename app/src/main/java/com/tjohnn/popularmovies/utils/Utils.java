@@ -1,9 +1,13 @@
 package com.tjohnn.popularmovies.utils;
 
+import android.net.Uri;
+
 import com.jakewharton.retrofit2.adapter.rxjava2.HttpException;
 
 import java.io.IOException;
 import java.net.SocketTimeoutException;
+
+import timber.log.Timber;
 
 public class Utils {
 
@@ -26,5 +30,8 @@ public class Utils {
         return message;
     }
 
+    public static Uri getYoutubeVideoUri(String videoId){
+        return Uri.parse("http://www.youtube.com/watch?v=" + videoId);
+    }
 
 }

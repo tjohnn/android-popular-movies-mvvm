@@ -24,5 +24,11 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             />
+        <RadioButton android:id="@+id/radio_favorite"
+            android:text="@string/my_favorites"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            />
     </RadioGroup>
 </LinearLayout>

@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -37,23 +38,23 @@
                         android:background="@color/colorWhite"
                         android:layout_gravity="bottom"
                         app:cardBackgroundColor="@color/colorWhite"
-                        android:elevation="7dp"
+                        app:cardElevation="7dp"
                         >
                         <android.support.constraint.ConstraintLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="160dp"
+                            android:layout_marginStart="160dp"
                             >
                             <TextView
                                 android:id="@+id/tv_title"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
-                                android:text="Pirate of the Carribbean Jack Sparrow"
+                                tools:text="Pirate of the Carribbean Jack Sparrow"
                                 android:textStyle="bold"
-                                android:padding="8dp"
                                 android:textColor="@color/colorPrimaryDark"
-                                android:layout_marginBottom="16dp"
+                                android:layout_marginBottom="8dp"
                                 />
 
                             <TextView
@@ -61,7 +62,6 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
-                                android:layout_marginBottom="16dp"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@id/tv_title"
@@ -72,13 +72,23 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
-                                android:layout_marginTop="16dp"
-                                android:layout_marginBottom="16dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@id/tv_rating"
                                 android:textSize="12sp"
                                 tools:text="7th of Aug, 2009" />
+
+                            <ImageView android:id="@+id/iv_favorite"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:gravity="center"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tv_release_date"
+                                android:src="@drawable/ic_star_border_orange_24dp"
+                                />
                         </android.support.constraint.ConstraintLayout>
                     </android.support.v7.widget.CardView>
                     <ImageView
@@ -97,8 +107,44 @@
                 android:layout_margin="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/bg_border_bottom_thick"
+                android:paddingBottom="8dp"
                 tools:text="In 2013, something terrible is awakening in London's National Gallery; in 1562, a murderous plot is afoot in Elizabethan England; and somewhere in space an ancient battle reaches its devastating conclusion. All of reality is at stake as the Doctor's own dangerous past comes back to haunt him."
                 />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="16dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:text="@string/trailers"/>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_trailers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="16dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:text="@string/reviews"/>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_reviews"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
     <FrameLayout android:id="@+id/progress_bar_wrapper"

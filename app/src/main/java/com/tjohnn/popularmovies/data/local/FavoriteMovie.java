@@ -4,7 +4,7 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.PrimaryKey;
 
-import com.tjohnn.popularmovies.data.model.Movie;
+import com.tjohnn.popularmovies.data.dtos.Movie;
 
 @Entity(tableName = "favorite_movie")
 public class FavoriteMovie {

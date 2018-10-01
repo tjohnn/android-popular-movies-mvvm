@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 import com.tjohnn.popularmovies.R;
-import com.tjohnn.popularmovies.data.model.Movie;
+import com.tjohnn.popularmovies.data.dtos.Movie;
 import com.tjohnn.popularmovies.utils.Constants;
 
 import java.util.List;

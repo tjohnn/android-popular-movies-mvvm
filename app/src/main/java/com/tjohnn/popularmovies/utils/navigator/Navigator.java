@@ -48,7 +48,7 @@ public class Navigator implements BaseNavigator {
     public static void openFragment(@NonNull FragmentManager fragmentManager, @NonNull Fragment fragment, String tag, int frameId) {
 
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.replace(frameId, fragment, tag)
+        transaction.add(frameId, fragment, tag)
                 .addToBackStack(tag)
                 .commit();
     }

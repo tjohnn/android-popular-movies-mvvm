@@ -5,7 +5,10 @@ import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
+import android.arch.persistence.room.Transaction;
 import android.arch.persistence.room.Update;
+
+import com.tjohnn.popularmovies.data.dtos.Movie;
 
 import java.util.List;
 
@@ -15,8 +18,9 @@ public interface FavoriteMoviesDao {
     @Query("SELECT * FROM favorite_movie WHERE id = :id")
     LiveData<FavoriteMovie> getFavoriteMovieById(long id);
 
+    @Transaction
     @Query("SELECT * FROM favorite_movie ORDER BY voteAverage DESC")
-    LiveData<List<FavoriteMovie>> getFavoriteMovies();
+    LiveData<List<Movie>> getFavoriteMovies();
 
     @Insert
     void insertFavoriteMovie(FavoriteMovie favoriteMovie);

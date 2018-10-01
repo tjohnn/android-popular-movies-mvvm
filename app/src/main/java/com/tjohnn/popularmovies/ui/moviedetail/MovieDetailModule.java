@@ -1,5 +1,8 @@
 package com.tjohnn.popularmovies.ui.moviedetail;
 
+import android.arch.lifecycle.ViewModelProviders;
+
+import com.tjohnn.popularmovies.data.repository.LocalMovieRepository;
 import com.tjohnn.popularmovies.data.repository.MoviesRepository;
 import com.tjohnn.popularmovies.di.FragmentScoped;
 import com.tjohnn.popularmovies.utils.navigator.BaseNavigator;
@@ -13,8 +16,11 @@ public abstract class MovieDetailModule {
 
     @Provides
     @FragmentScoped
-    static MovieDetailViewModel moviesViewModel(String movieId, MoviesRepository moviesRepository, BaseNavigator baseNavigator){
-        return new MovieDetailViewModel(movieId, moviesRepository, baseNavigator);
+    static MovieDetailViewModel moviesViewModel(MovieDetailFragment movieDetailFragment, String movieId, MoviesRepository moviesRepository,
+                                                LocalMovieRepository localMovieRepository, BaseNavigator baseNavigator){
+        return ViewModelProviders.of(movieDetailFragment,
+                new MovieDetailViewModel.ViewModelFactory(movieId, moviesRepository,
+                        localMovieRepository, baseNavigator)).get(MovieDetailViewModel.class);
     }
 
     @Provides

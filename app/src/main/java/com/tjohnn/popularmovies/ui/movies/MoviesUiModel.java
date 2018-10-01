@@ -1,15 +1,16 @@
 package com.tjohnn.popularmovies.ui.movies;
 
-import com.tjohnn.popularmovies.data.model.ArrayResponse;
-import com.tjohnn.popularmovies.data.model.Movie;
+import com.tjohnn.popularmovies.data.dtos.Movie;
+
+import java.util.List;
 
 
 public class MoviesUiModel {
 
     private final boolean isMoviesGridVisible;
-    private final ArrayResponse<Movie> movieList;
+    private final List<Movie> movieList;
 
-    MoviesUiModel(boolean isMoviesGridVisible, ArrayResponse<Movie> movieList){
+    MoviesUiModel(boolean isMoviesGridVisible, List<Movie> movieList){
 
         this.isMoviesGridVisible = isMoviesGridVisible;
         this.movieList = movieList;
@@ -19,7 +20,7 @@ public class MoviesUiModel {
         return isMoviesGridVisible;
     }
 
-    public ArrayResponse<Movie> getMovieList() {
+    public List<Movie> getMovieList() {
         return movieList;
     }
 

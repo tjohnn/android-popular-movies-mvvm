@@ -10,6 +10,9 @@ import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import com.squareup.picasso.Picasso;
 import com.tjohnn.popularmovies.BuildConfig;
 import com.tjohnn.popularmovies.data.remote.ApiService;
+import com.tjohnn.popularmovies.utils.GsonBooleanTypeAdapter;
+import com.tjohnn.popularmovies.utils.GsonIntTypeAdapter;
+import com.tjohnn.popularmovies.utils.GsonLongTypeAdapter;
 
 import java.io.File;
 import java.io.IOException;
@@ -97,7 +100,9 @@ public abstract class NetworkModule {
     static Gson provideGson(){
         GsonBuilder gsonBuilder = new GsonBuilder();
         gsonBuilder.setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES);
-
+        gsonBuilder.registerTypeAdapter(boolean.class, new GsonBooleanTypeAdapter());
+        gsonBuilder.registerTypeAdapter(int.class, new GsonIntTypeAdapter());
+        gsonBuilder.registerTypeAdapter(long.class, new GsonLongTypeAdapter());
         return  gsonBuilder.create();
     }
 

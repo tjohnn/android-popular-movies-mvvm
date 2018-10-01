@@ -7,4 +7,8 @@
     <string name="sort_by">Sort By</string>
     <string name="sort_by_rating">Sort by rating</string>
     <string name="sort_by_popularity">Sort by popularity</string>
+    <string name="my_favorites">My Favorites</string>
+    <string name="trailers">Trailers</string>
+    <string name="reviews">Reviews</string>
+    <string name="trailer_item_icon">Trailer item icon</string>
 </resources>

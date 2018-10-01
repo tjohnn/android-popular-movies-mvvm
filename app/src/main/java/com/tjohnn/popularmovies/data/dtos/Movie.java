@@ -1,27 +1,58 @@
-package com.tjohnn.popularmovies.data.model;
+package com.tjohnn.popularmovies.data.dtos;
 
+import android.arch.persistence.room.Ignore;
 import android.os.Parcel;
 import android.os.Parcelable;
+
+import com.tjohnn.popularmovies.data.local.FavoriteMovie;
 
 import java.util.List;
 
 public class Movie implements Parcelable {
 
+    @Ignore
     public int voteCount;
+    @Ignore
     public List<Integer> genreIds;
     public long id;
+    @Ignore
     public boolean video;
+    @Ignore
     public boolean adult;
     public double voteAverage;
+    @Ignore
     public double popularity;
     public String title;
     public String posterPath;
     public String backdropPath;
+    @Ignore
     public String originalLanguage;
     public String originalTitle;
     public String overview;
     public String releaseDate;
 
+    public Movie(long id, double voteAverage, String title, String posterPath, String backdropPath,
+                 String originalTitle, String overview, String releaseDate) {
+        this.id = id;
+        this.voteAverage = voteAverage;
+        this.title = title;
+        this.posterPath = posterPath;
+        this.backdropPath = backdropPath;
+        this.originalTitle = originalTitle;
+        this.overview = overview;
+        this.releaseDate = releaseDate;
+    }
+
+    public Movie(FavoriteMovie movie) {
+        id = movie.id;
+        originalTitle = movie.originalTitle;
+        overview = movie.overview;
+        voteAverage = movie.voteAverage;
+        releaseDate = movie.releaseDate;
+        backdropPath = movie.backdropPath;
+        posterPath = movie.posterPath;
+        title = movie.title;
+    }
 
     protected Movie(Parcel in) {
         voteCount = in.readInt();

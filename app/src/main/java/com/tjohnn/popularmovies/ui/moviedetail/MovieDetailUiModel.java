@@ -1,6 +1,6 @@
 package com.tjohnn.popularmovies.ui.moviedetail;
 
-import com.tjohnn.popularmovies.data.model.Movie;
+import com.tjohnn.popularmovies.data.dtos.Movie;
 
 public class MovieDetailUiModel {
 

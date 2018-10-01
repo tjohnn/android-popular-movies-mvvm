@@ -1,8 +1,8 @@
 package com.tjohnn.popularmovies.di;
 
 import android.app.Application;
+
 import com.tjohnn.popularmovies.MoviesApp;
-import com.tjohnn.popularmovies.data.repository.MoviesRepository;
 
 import javax.inject.Singleton;
 

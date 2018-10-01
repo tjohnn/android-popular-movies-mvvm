@@ -1,12 +1,16 @@
-package com.tjohnn.popularmovies.data.model;
+package com.tjohnn.popularmovies.data.dtos;
+
+import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
 public class ArrayResponse<T> {
 
+    public long id;
     public int page;
     public int totalResults;
     public int totalPages;
+    @SerializedName(value="results", alternate={"youtube"})
     public List<T> results;
 
     @Override
